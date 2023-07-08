@@ -53,26 +53,123 @@
 // let lastItem = document.querySelector('.list-group-item:last-child');
 // lastItem.style.color='blue';
 
-  let secondItem = document.querySelector('.list-group-item:nth-child(2)');
-  secondItem.style.backgroundColor = 'green';
+//   let secondItem = document.querySelector('.list-group-item:nth-child(2)');
+//   secondItem.style.backgroundColor = 'green';
 
-  let thirdItem= document.querySelector('.list-group-item:nth-child(3)');
-  thirdItem.style.visibility = "hidden";
+//   let thirdItem= document.querySelector('.list-group-item:nth-child(3)');
+//   thirdItem.style.visibility = "hidden";
 
 
 // QUERYSELECTORALL //
 // let titles = document.querySelectorAll('.title');
 // console.log(titles);
 // titles[0].textContent='Hello';
-   let sItem = document.querySelectorAll('li')[1];
-   sItem.style.color= 'green';
+//    let sItem = document.querySelectorAll('li')[1];
+//    sItem.style.color= 'green';
 
- let odd = document.querySelectorAll('li:nth-child(odd)');
-// let even = document.querySelectorAll('li:nth-child(even)');
-   for(let i=0; i<odd.length;i++){
-    odd[i].style.backgroundColor = 'green';
+//  let odd = document.querySelectorAll('li:nth-child(odd)');
+//  let even = document.querySelectorAll('li:nth-child(even)');
+//    for(let i=0; i<odd.length;i++){
+//     odd[i].style.backgroundColor = 'green';
 //    even[i].style.backgroundColor = '#ccc' ;
- }
+//  }
+
+
+let itemList= document.querySelector('#items');
+//parentNode
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentNode.parentNode.parentNode);
+
+//parentElement
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor = '#f4f4f4';
+// console.log(itemList.parentElement.parentElement.parentElement);
+
+//childNodes
+//console.log(itemList.childNodes);
+
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor='yellow';
+
+//FirstChild
+// console.log(itemList.firstChild);
+// //firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello';
+
+//lastChild
+// console.log(itemList.lastChild);
+// //firstElementChild
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent = 'Hello';
+
+//nextSibling
+//console.log(itemList.nextSibling);
+//nextElementSibling
+//console.log(itemList.nextElementSibling);
+
+//previousSibling
+//console.log(itemList.previousSibling);
+//previousElementSibling
+// console.log(itemList.previousElementSibling);
+// itemList.previousElementSibling.style.color = 'green';
+
+// createElement
+//create a div
+let newDiv = document.createElement('div');
+
+//Add class
+newDiv.className= 'hello';
+
+//Add id
+newDiv.id = 'hello1';
+
+//Add attr
+newDiv.setAttribute('title','Hello Div');
+
+//create text node
+let newDivText = document.createTextNode('Hello World');
+
+//Add text to div
+newDiv.appendChild(newDivText);
+
+
+let container = document.querySelector('header .container');
+let h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+newDiv.style.fontSize = '30px';
+
+container.insertBefore(newDiv,h1);
+
+// let newheading = document.createElement('h2');
+// let newheadingText = document.createTextNode('Hello World');
+// newheading.appendChild(newheadingText);
+// document.getElementsByClassName('list-group-item').appendChild(newheading);
+//let listgroupitem = document.getElementsById('22');
+//let ul =document.querySelector('ul li');
+//console.log(newheading);
+//listgroupitem.insertBefore(newheading,listgroupitem.childNodes[0]);
+
+     const itemsList = document.getElementById('items');
+    // Create a new li element
+    const newItem = document.createElement('li');
+    newItem.className = 'list-group-item';
+    newItem.textContent = 'Hello world';
+
+    // Find the first li element in the list
+    const firstItem = itemsList.querySelector('li');
+
+    // Insert the new li element before the first li element
+    itemsList.insertBefore(newItem, firstItem);
+
+
+
+
+
 
  
  
